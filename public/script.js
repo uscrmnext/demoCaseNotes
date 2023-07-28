@@ -48,21 +48,6 @@ function updateNote() {
     const dmsNoteTarget = document.getElementById('dmsNoteTarget')
     const caseSubject = document.getElementsByName('CASE_SUBCATEGORY1')[0].value
 
-    
-    
-
-    // switch (caseSubject) {
-    //     case 'Disputed Credit Card Transaction':
-    //         dmsNoteTarget.innerHTML = templates.creditCardDisute
-    //         break
-    //     case 'Disputed Debit Card Transaction':
-    //         dmsNoteTarget.innerHTML = templates.debitCardDispute
-    //         break
-    //     default:
-    //         dmsNoteTarget.innerHTML = 'Default'
-    //         break
-    // }
-
     if(templates[caseSubject]){
         dmsNoteTarget.innerHTML = templates[caseSubject]
     } else {
