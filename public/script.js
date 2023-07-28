@@ -63,7 +63,7 @@ function updateNote() {
     //         break
     // }
 
-    if(caseSubject){
+    if(selections[caseSubject]){
         dmsNoteTarget.innerHTML = selections[caseSubject]
     } else {
         dmsNoteTarget.innerHTML = 'No Note!'
