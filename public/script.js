@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', updateNote)
 
-const selections = {
+const templates = {
         'Disputed Credit Card Transaction': `
     <h3>Credit Card Dispute</h3>
     1. Immediately block this card to prevent any further fraudulent charges.
@@ -53,18 +53,18 @@ function updateNote() {
 
     // switch (caseSubject) {
     //     case 'Disputed Credit Card Transaction':
-    //         dmsNoteTarget.innerHTML = selections.creditCardDisute
+    //         dmsNoteTarget.innerHTML = templates.creditCardDisute
     //         break
     //     case 'Disputed Debit Card Transaction':
-    //         dmsNoteTarget.innerHTML = selections.debitCardDispute
+    //         dmsNoteTarget.innerHTML = templates.debitCardDispute
     //         break
     //     default:
     //         dmsNoteTarget.innerHTML = 'Default'
     //         break
     // }
 
-    if(selections[caseSubject]){
-        dmsNoteTarget.innerHTML = selections[caseSubject]
+    if(templates[caseSubject]){
+        dmsNoteTarget.innerHTML = templates[caseSubject]
     } else {
         dmsNoteTarget.innerHTML = 'No Note!'
     }
