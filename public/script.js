@@ -22,7 +22,7 @@ function updateNote() {
             break
     }
 
-    console.log('update')
+    console.log('another update')
 }
 
 
