@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', updateNote)
+// document.addEventListener('DOMContentLoaded', displayExcel)
 
 const templates = {
         'Disputed Credit Card Transaction': `
@@ -68,5 +69,27 @@ function updateNote() {
         dmsNoteTarget.innerHTML = 'No Note!'
     }
 
+
+
     
 }
+
+// async function displayExcel(){
+  
+//   const url = 'https://crmnextus-gold8-dms-scripts.s3.amazonaws.com/Note+Templates.xlsx'
+  
+//   const file = await (await fetch(url)).arrayBuffer()
+
+//   const workbook = XLSX.read(file);
+
+//   const worksheet = workbook.Sheets[workbook.SheetNames[0]]
+
+//   const rawData = XLSX.utils.sheet_to_json(worksheet)
+//   console.log(rawData)
+
+//   const output = rawData.filter(item => item.Subject == 'Auto Loan')
+  
+
+//   document.getElementById('excelNoteTarget').innerHTML = output[0].Description
+
+// }
