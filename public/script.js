@@ -1,10 +1,6 @@
 document.addEventListener('DOMContentLoaded', updateNote)
 
-function updateNote() {
-    const dmsNoteTarget = document.getElementById('dmsNoteTarget')
-    const caseSubject = document.getElementsByName('CASE_SUBCATEGORY1')[0].value
-
-    const selections = {
+const selections = {
         creditCardDisute: `
     <h3>Credit Card Dispute</h3>
     1. Immediately block this card to prevent any further fraudulent charges.
@@ -47,6 +43,13 @@ function updateNote() {
 
     `
     }
+
+    
+function updateNote() {
+    const dmsNoteTarget = document.getElementById('dmsNoteTarget')
+    const caseSubject = document.getElementsByName('CASE_SUBCATEGORY1')[0].value
+
+    
 
     switch (caseSubject) {
         case 'Disputed Credit Card Transaction':
