@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', updateNote)
 
 const templates = {
         'Disputed Credit Card Transaction': `
-    <h3>Credit Card Dispute</h3>
+    <h3><u>Credit Card Dispute</u></h3>
     1. Immediately block this card to prevent any further fraudulent charges.
     <br>
     <br>
@@ -23,7 +23,7 @@ const templates = {
 
     `,
     'Disputed Debit Card Transaction': `
-    <h3>Debit Card Dispute</h3>
+    <h3><u>Debit Card Dispute</u></h3>
     1. Immediately block this card to prevent any further fraudulent charges.
     < br >
       <br>
