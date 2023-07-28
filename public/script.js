@@ -21,6 +21,8 @@ function updateNote() {
             dmsNoteTarget.innerHTML = 'Default'
             break
     }
+
+    console.log('update')
 }
 
 
