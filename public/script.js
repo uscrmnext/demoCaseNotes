@@ -25,7 +25,7 @@ const templates = {
     'Disputed Debit Card Transaction': `
     <h3><u>Debit Card Dispute</u></h3>
     1. Immediately block this card to prevent any further fraudulent charges.
-    < br >
+    <br>
       <br>
         2. Before submitting the dispute, ensure the customer/member has already called the merchant to inquire about the charge.
         <br>
@@ -40,16 +40,30 @@ const templates = {
                   <li><a href="https://crmnext.us" target="_blank"> Policy and Procedures Manual</a></li>
                   <li><a href="https://crmnext.us" target="_blank"> Policy and Procedures Manual</a></li>
                 </ul>
-    `
+    `,
+    'Auto Loan': 'Auto Loan Test'
     }
 
 
 function updateNote() {
     const dmsNoteTarget = document.getElementById('dmsNoteTarget')
-    const caseSubject = document.getElementsByName('CASE_SUBCATEGORY1')[0].value
 
-    if(templates[caseSubject]){
-        dmsNoteTarget.innerHTML = templates[caseSubject]
+    var subject = ''
+
+    const caseSubject = document.getElementsByName('CASE_SUBCATEGORY1')[0]
+    const leadSubject = document.getElementsByName('cust_6055')[0]
+
+    if(caseSubject){
+      subject = caseSubject.value
+    }
+
+    if (leadSubject) {
+        subject = leadSubject.value
+    }
+
+
+    if(templates[subject]){
+        dmsNoteTarget.innerHTML = templates[subject]
     } else {
         dmsNoteTarget.innerHTML = 'No Note!'
     }
